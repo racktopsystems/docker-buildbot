@@ -21,4 +21,13 @@ EOF
 fi
 
 cd /slave
+
+# prevent these from leaking into or cluttering the build report
+unset GOSU_VERSION \
+    MASTER \
+    SLAVE_NAME \
+    SLAVE_PASSWORD \
+    SLAVE_ADMIN \
+    SLAVE_DESCRIPTION
+
 exec gosu buildbot buildslave start --nodaemon $SLAVE_ARGS
