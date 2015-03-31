@@ -2,7 +2,18 @@
 
 ## Buildbot Master
 
-...
+This container is pretty simple. It exports one volume, `/master`, which
+will be initialized with a default Buildbot configuration if empty. You will
+need to edit `master.cfg` afterwards. Otherwise, the existing configuration
+is automatically upgraded before Buildbot is started.
+
+Two ports are exposed:
+
+* 8010: Buildbot web interface
+* 9989: Buildbot slave-control RPC interface
+
+Due to the unencrypted nature of Buildbot control connections, you may want
+to firewall 9989 in some fashion.
 
 ## Buildbot Slave
 

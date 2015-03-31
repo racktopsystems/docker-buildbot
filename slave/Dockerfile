@@ -25,10 +25,9 @@ RUN apt-get -q update \
 
 RUN pip install buildbot-slave
 
-COPY ./run.sh /
-
 RUN groupadd -r buildbot \
     && useradd -r -d /slave -g buildbot -G docker buildbot \
     && mkdir /slave
 
+COPY ./run.sh /
 CMD ["wrapdocker", "/run.sh"]
