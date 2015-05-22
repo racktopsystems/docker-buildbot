@@ -26,7 +26,7 @@ docker run --privileged -d \
         -e MASTER=buildbot.example.com \
         -e SLAVE_NAME=myslavename \
         -e SLAVE_PASSWD=mysecret \
-        --name=buildbot-slave purism/buildbot-slave
+        --name=buildbot-slave rts/buildbot-slave
 ```
 
 There is no need for volumes in this image, as all state is contained in

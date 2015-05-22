@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 
-MAINTAINER Ryan Smith-Roberts <rmsr@puri.sm>
+MAINTAINER Sam Zaydel <szaydel@racktopsystems.com>
 
 ENV GOSU_VERSION 1.3
 
